@@ -13,21 +13,35 @@
 
         <title>Flurry Flakes</title>
     </head>
-    <body>
+    <body class="flurry">
         
         <section id="home" data-role="page">
+            <div data-role="panel" id="home-panel" data-display="push" data-position="right" data-theme="b">
+                <a href="#contacts">Contacts</a>
+            </div>
+
             <header data-role="header">
                 <h1>Flurry Flakes</h1>
+                <a href="#home-panel" data-icon="info" class="ui-btn-right">info</a>
+            </header>
+            <div data-role="content">
+              <a data-role="button" href="#gallery">To the Gallery!</a>  
+            </div>
+        </section>
+
+        <section id="gallery" data-role="page">
+            <header data-role="header">
+                <h1>Gallery</h1>
             </header>
             <div data-role="content">
                 
             </div>
         </section>
 
-        <script type="text/javascript" src="phonegap.js"></script>
+<!--         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
-    </body>
+ -->    </body>
 </html>
