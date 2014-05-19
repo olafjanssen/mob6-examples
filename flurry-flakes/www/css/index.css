@@ -1,13 +1,26 @@
+body.flurry {
+    background-color: white;
+}
+
+.flurry #home header a {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+.flurry #home header a::after {
+    background-color: #333;
+    color: #333;
+}
+
 .flurry #home .ui-panel-wrapper {
     background-image: url("../img/home.gif");
     background-color: rgb(255,216,168);
     background-repeat: no-repeat;
-    background-position: center 100%;
+    background-position: center 60%;
     background-size: contain;
 }
 
-
-/*jQuery Mobile overrides*/
 .flurry .ui-page-theme-a .ui-bar-inherit {
     background-color: transparent;
     border-color: transparent;
@@ -18,4 +31,33 @@
     background: none;
     box-shadow: none;
     border: none;
+}
+
+.flurry .ui-page {
+    margin-top: 20px;
+}
+
+#gallery-button {
+    margin-top: 25em;
+}
+
+#gallery-scroll-container {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 44px;
+}
+
+#gallery-img-container {
+    -webkit-transition: left 1s ease-out;
+    width: 30000px;
+    position: relative;
+}
+
+#gallery-img-container img {
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
 }
