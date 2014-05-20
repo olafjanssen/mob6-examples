@@ -4,7 +4,7 @@
 $("#name-form").on("submit", function(event){
     var data = { name: $("#name-input").val() };
 
-    $.post( "http://i876011.iris.fhict.nl/flakes.php", data)
+    $.post( "http://my-server.com/flakes.php", data)
       .done(function( data ) {
         console.log(data);
         renderNameData($("#name-data"), data);    

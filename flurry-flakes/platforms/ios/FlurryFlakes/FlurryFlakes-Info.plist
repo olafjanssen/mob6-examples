@@ -77,6 +77,8 @@
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
+    <key>UIApplicationExitsOnSuspend</key>
+    <true/>
     <key>CFBundleShortVersionString</key>
     <string>1.0.0</string>
   </dict>

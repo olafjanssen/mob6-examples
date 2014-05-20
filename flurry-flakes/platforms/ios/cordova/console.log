@@ -1,18 +1,36 @@
-2014-04-27 23:17:16.054 HelloWorld[3821:70b] Multi-tasking -> Device: YES, App: YES
-2014-04-27 23:17:16.616 HelloWorld[3821:70b] Resetting plugins due to page load.
-2014-04-27 23:17:16.808 HelloWorld[3821:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/D1FED540-0016-4AEF-9115-CDB74C5E3706/HelloWorld.app/www/index.html
-2014-04-27 23:49:45.383 FlurryFlakes[6123:70b] Multi-tasking -> Device: YES, App: YES
-2014-04-27 23:49:46.988 FlurryFlakes[6123:70b] Resetting plugins due to page load.
-2014-04-27 23:49:48.454 FlurryFlakes[6123:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB2BA065-EF7A-42CA-B15D-3C9A01A6E6CE/FlurryFlakes.app/www/index.html
-2014-04-27 23:51:38.549 FlurryFlakes[8033:70b] Multi-tasking -> Device: YES, App: YES
-2014-04-27 23:51:38.834 FlurryFlakes[8033:70b] Resetting plugins due to page load.
-2014-04-27 23:51:39.087 FlurryFlakes[8033:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB2BA065-EF7A-42CA-B15D-3C9A01A6E6CE/FlurryFlakes.app/www/index.html
-2014-04-27 23:54:30.858 FlurryFlakes[9948:70b] Multi-tasking -> Device: YES, App: YES
-2014-04-27 23:54:31.470 FlurryFlakes[9948:70b] Resetting plugins due to page load.
-2014-04-27 23:54:31.722 FlurryFlakes[9948:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB2BA065-EF7A-42CA-B15D-3C9A01A6E6CE/FlurryFlakes.app/www/index.html
-2014-04-27 23:55:37.604 FlurryFlakes[11841:70b] Multi-tasking -> Device: YES, App: YES
-2014-04-27 23:55:37.881 FlurryFlakes[11841:70b] Resetting plugins due to page load.
-2014-04-27 23:55:38.129 FlurryFlakes[11841:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB2BA065-EF7A-42CA-B15D-3C9A01A6E6CE/FlurryFlakes.app/www/index.html
-2014-04-27 23:58:25.708 FlurryFlakes[13752:70b] Multi-tasking -> Device: YES, App: YES
-2014-04-27 23:58:25.888 FlurryFlakes[13752:70b] Resetting plugins due to page load.
-2014-04-27 23:58:26.184 FlurryFlakes[13752:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB2BA065-EF7A-42CA-B15D-3C9A01A6E6CE/FlurryFlakes.app/www/index.html
+2014-05-20 11:29:33.452 FlurryFlakes[22679:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-20 11:29:33.628 FlurryFlakes[22679:70b] Resetting plugins due to page load.
+2014-05-20 11:29:33.831 FlurryFlakes[22679:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/34D27242-46FC-4ACE-A89B-FD00846A139B/FlurryFlakes.app/www/index.html
+2014-05-20 11:45:16.801 FlurryFlakes[24312:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-20 11:45:20.885 FlurryFlakes[24312:70b] Resetting plugins due to page load.
+2014-05-20 11:45:21.795 FlurryFlakes[24312:70b] Finished load of: file:///Users/olafjanssen/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/34D27242-46FC-4ACE-A89B-FD00846A139B/FlurryFlakes.app/www/index.html
+2014-05-20 11:48:21.231 FlurryFlakes[24312:70b] CDVPlugin class CDVAccelerometer (pluginName: Accelerometer) does not exist.
+2014-05-20 11:48:21.232 FlurryFlakes[24312:70b] ERROR: Plugin 'Accelerometer' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-05-20 11:48:21.232 FlurryFlakes[24312:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Accelerometer410315463",
+  "Accelerometer",
+  "start",
+  [
+
+  ]
+]
+2014-05-20 11:48:32.185 FlurryFlakes[24312:70b] CDVPlugin class CDVAccelerometer (pluginName: Accelerometer) does not exist.
+2014-05-20 11:48:32.191 FlurryFlakes[24312:70b] ERROR: Plugin 'Accelerometer' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-05-20 11:48:32.191 FlurryFlakes[24312:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Accelerometer",
+  "stop",
+  [
+
+  ]
+]
+2014-05-20 11:48:34.005 FlurryFlakes[24312:70b] CDVPlugin class CDVAccelerometer (pluginName: Accelerometer) does not exist.
+2014-05-20 11:48:34.006 FlurryFlakes[24312:70b] ERROR: Plugin 'Accelerometer' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-05-20 11:48:34.006 FlurryFlakes[24312:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Accelerometer410315464",
+  "Accelerometer",
+  "start",
+  [
+
+  ]
+]

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B8F96FCD-42E3-43C4-AE19-DF7815322B57</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlurryFlakes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF76FB83-38C9-4398-92BC-6297B15DECA1</key>
+		<string>https://github.com/olafjanssen/mob6-examples.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>flurry-flakes/platforms/ios/FlurryFlakes.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF76FB83-38C9-4398-92BC-6297B15DECA1</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/olafjanssen/mob6-examples.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF76FB83-38C9-4398-92BC-6297B15DECA1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF76FB83-38C9-4398-92BC-6297B15DECA1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>examples</string>
+		</dict>
+	</array>
+</dict>
+</plist>

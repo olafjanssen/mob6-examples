@@ -1,37 +1,113 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-    },
-};
+    NAME DIALOG
+*/
+$("#name-form").on("submit", function(event){
+    var data = { name: $("#name-input").val() };
+
+    $.post( "http://i876011.iris.fhict.nl/flakes.php", data)
+      .done(function( data ) {
+        console.log(data);
+        renderNameData($("#name-data"), data);    
+    });
+    
+    // prevent default submit behavior
+    return false;
+});
+
+// renders the tumblr photo data into a gallery container
+function renderNameData($target, data) {
+    $target.empty();
+    for(var i = 0; i < data.data.length; i++){
+        $target.append($("<li>" + data.data[i] + "</li>"));
+    }
+}
+
+
+
+
+
+
+/*
+    DETAILS PAGE
+*/
+$("#details").on("pagebeforeshow", function(event){
+        var data = $("#details").data("post");
+        if (data){
+            var post = JSON.parse(data);
+            $("#details [data-role=content]").empty().append("<h1>"+post.date+"</h1>"+post["photo-caption"]);
+        } else {
+            $.mobile.pageContainer.pagecontainer("change","#home");
+        }
+    }
+).on("pagehide", function(event){
+        $("#details [data-role=content]").empty();
+    }
+);
+
+
+
+
+
+
+/*
+    GALLERY PAGE
+*/
+var watchId, loaded = false;
+$("#gallery").on("pageshow", function(event){
+    if (!loaded){
+        // load tumblr data
+        $.mobile.loading( "show");
+        $.ajax({
+            url: "http://flurryflakes.tumblr.com/api/read/json?num=50&type=photo",  
+            type: "GET",
+            dataType: "jsonp",
+            cache: false,
+            crossDomain: true,
+            processData: true,
+            success: function(result) 
+            {   
+                $.mobile.loading( "hide");
+                renderTumblrData($("#gallery-img-container"), result);
+                loaded = true;
+            },
+            error: function(e){  
+                $.mobile.loading( "hide");
+            }   
+        });
+    }
+
+    // listen for accelerator
+    var posX = 0;
+    var options = { frequency: 100 }; 
+    
+    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    function onSuccess(acceleration) {
+        if (Math.abs(acceleration.x)>4){
+            posX += 20*acceleration.x;
+            $("#gallery-img-container").css({"left": posX+"px"});
+        }
+    };
+
+    function onError() {
+        console.log("error");
+    };
+
+}).on("pagehide", function(event){
+       navigator.accelerometer.clearWatch(watchID); 
+    }
+);
+
+// renders the tumblr photo data into a gallery container
+function renderTumblrData($target, data) {
+    for(var i = 0; i < data.posts.length; i++){
+        $target.append($("<a href='#details' data-transition='slide'><img src="+data.posts[i]["photo-url-500"]+"></a>"));
+        $target.find("img:last").data("post", JSON.stringify(data.posts[i]));
+        console.log($target.find("img:last"));
+    }
+
+    $target.find("img").on("tap", function() {
+        var $this = $(this);
+        $("#details").data("post", $this.data("post"));
+    });
+
+}
