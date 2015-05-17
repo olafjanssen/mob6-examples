@@ -1,3 +1,7 @@
+
+
+// handlers
+
 /*
     NAME DIALOG
 */
@@ -23,10 +27,6 @@ function renderNameData($target, data) {
 }
 
 
-
-
-
-
 /*
     DETAILS PAGE
 */
@@ -43,9 +43,6 @@ $("#details").on("pagebeforeshow", function(event){
         $("#details [data-role=content]").empty();
     }
 );
-
-
-
 
 
 
@@ -66,6 +63,7 @@ $("#gallery").on("pageshow", function(event){
             processData: true,
             success: function(result) 
             {   
+                window.alert(result);
                 $.mobile.loading( "hide");
                 renderTumblrData($("#gallery-img-container"), result);
                 loaded = true;
